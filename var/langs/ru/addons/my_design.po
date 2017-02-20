@@ -1,0 +1,13 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: cs-cart-latest\n"
+"Language-Team: Russian\n"
+"Language: ru_RU\n"
+
+msgctxt "Addons::name::my_design"
+msgid "My design"
+msgstr "Мой дизайн"
+
+msgctxt "Addons::description::my_design"
+msgid "Description (my design)"
+msgstr "Описание модуля"

@@ -1,0 +1,239 @@
+/* ==========================================================================
+My design
+========================================================================== */
+//Переменные 
+@table-width1: ~"(max-width: 768px)";
+@mobile-width1: ~"(max-width: 600px)";
+@mobile-width2: ~"(max-width: 500px)";
+@mobile-width3: ~"(max-width: 425px)";
+
+//подключение шрифта (для заголовка на главной)
+
+@font-face {
+    font-family: 'BERNIER';
+    src: url('../../../media/fonts/BERNIERRegular-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.banner-main {
+    //фон для главной страницы
+    width: 100vw;
+    min-height: 950px;
+    box-sizing: border-box;
+    background: #000;
+
+    @media @table-width1 {        
+        min-height: 600px;                
+        }
+
+    @media @mobile-width1 {
+        min-height: 550px;                
+        }
+
+    @media @mobile-width3 {
+        min-height: 450px;                
+        }
+
+
+    h1 {
+    //заголовок на главной
+    color: #fff;
+    background: #000;
+    font-size: 70px;
+    //outline: 2px solid red;
+    text-align: center;
+    min-height: 150px;
+    margin: 0;
+    padding-top: 100px;
+    box-sizing: border-box;
+    //font-family: 'Cassandra';
+    font-family: 'BERNIER';
+    letter-spacing: 5px;
+
+    @media @table-width1 {
+        font-size: 55px;
+        padding-top: 70px;
+        min-height: 120px;                
+        }
+
+    @media @mobile-width1 {
+        font-size: 60px;
+        padding-top: 50px;
+        min-height: 90px;                
+        }
+
+    @media @mobile-width2 {
+        font-size: 50px;
+        padding-top: 35px;
+        min-height: 70px;                
+        }
+
+    @media @mobile-width3 {
+        font-size: 45px;
+        padding-top: 35px;
+        min-height: 65px;                
+        }
+
+    }
+
+    h2 {
+    color: #999;
+    background: #000;
+    font-size: 32px;
+    //outline: 2px solid yellow;
+    text-align: center;
+    min-height: 60px;
+    margin: 0;    
+    box-sizing: border-box;
+    //font-family: 'Cassandra';
+    //font-family: 'BERNIER';
+    //letter-spacing: 5px;
+
+    @media @table-width1 {
+        font-size: 30px;
+        min-height: 55px;                
+        }
+
+    @media @mobile-width1 {
+        font-size: 28px;
+        min-height: 50px;                
+        }
+
+    @media @mobile-width2 {
+        font-size: 24px;
+        min-height: 40px;                
+        }
+
+    @media @mobile-width3 {
+        font-size: 22px;               
+        }
+
+    }
+
+
+
+    .background-img {
+    //изображение на главной
+    margin: 0 auto;
+    background: url('../../../../../../images/detailed/my_img/man.jpg') no-repeat;
+    width: 540px;
+    height: 650px;
+    background-position: 0 45%;
+    //outline: 2px solid #fff;
+
+    @media @mobile-width1 {
+        background-size: 430px 430px;
+        width: 440px;
+        height: 440px;
+        background-position: 50% 50%;        
+        }
+
+    @media @mobile-width2 {
+        background-size: 370px 370px;
+        width: 400px;
+        height: 400px;
+        background-position: 50% 50%;        
+        }
+
+    @media @mobile-width3 {
+        background-size: 320px 320px;
+        width: 330px;
+        height: 330px;
+        background-position: 50% 50%;        
+        }
+
+
+    }
+}
+
+//меню навигации в верхней панели
+.ty-menu__items {
+    background-color: #111111;
+}
+
+
+//Рекомендованные товары (в статьях) 
+.ty-mainbox-title {
+    padding-top: 50px;
+}
+
+.ty-text-links .ty-level-1 {
+    margin-left: 50px;
+    padding-top: 5px;
+    position: relative;
+}
+
+/*.ty-text-links .ty-level-1::before {
+    display: block;
+    position: absolute;
+    content: "";
+    width: 7px;
+    height: 2px;
+    background-color: #333;
+    top: 14px;
+    left: -17px;
+}*/
+
+.ty-text-links .ty-level-1:first-of-type {   
+    padding-top: 40px;
+}
+
+.page-catalogue .ty-sidebox-important__title-wrapper {
+    margin-bottom: 30px;
+
+}
+
+/*.ty-text-links .ty-level-1:first-of-type::before {
+    top: 49px;
+}*/
+
+//ик.шрифты
+
+@font-face {
+    font-family: 'icomoon';
+    src:url('../media/fonts/icomoon.eot');
+    src:url('../media/fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+    url('../media/fonts/icomoon.woff') format('woff'),
+    url('../media/fonts/icomoon.ttf') format('truetype'),
+    url('../media/fonts/icomoon.svg#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+    font-family: 'icomoon';
+    content: attr(data-icon);
+    speak: none;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Reset font-family for before */
+[class*="ty-icon-"]:before {
+  font-family: inherit;
+}
+
+.ty-icon-basket {
+    font-family: 'icomoon';
+}
+
+.ty-icon-basket::before {
+    content: "\e900";
+}
+
+.ty-icon-user {
+    font-family: 'icomoon';
+}
+
+.ty-icon-user::before {
+    content: "\e901";
+}
+
+/* /My design */
